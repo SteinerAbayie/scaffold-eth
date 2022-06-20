@@ -56,6 +56,8 @@ contract DEX {
 
     constructor(address token_addr) public {
         token = IERC20(token_addr); //specifies the token address that will hook into the interface and be used through the variable 'token'
+        uint256 public totalLiquidity;
+        mapping (address => uint256) public liquidity;
     }
 
     /* ========== MUTATIVE FUNCTIONS ========== */
